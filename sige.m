@@ -1,0 +1,9 @@
+function sigL = sige(L,def)
+STIFFSENSITIVITY = def.STIFFSENSITIVITY;
+THRESHOLDSTIFF = def.THRESHOLDSTIFF;
+MAXDHSTR = def.MAXDHSTR;
+
+	x = STIFFSENSITIVITY*(L - THRESHOLDSTIFF);
+	sigL = MAXDHSTR/(1 + exp(-x)); %sigmoid function
+
+end
